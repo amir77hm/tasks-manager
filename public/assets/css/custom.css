@@ -1,0 +1,28 @@
+body{
+    direction: rtl;
+    font-family: vazir;
+    text-align: right;
+    background-color: #f5f5f5;
+}
+#wrapper{
+    margin: 50px;
+}
+.btn-icon i{
+    vertical-align: middle;
+}
+table th,
+table td{
+    text-align: center;
+}
+.row{
+    margin-bottom: 50px;
+}
+a:hover{
+    text-decoration: none;
+}
+.form-check-label{
+    margin: inherit;
+}
+.card-header{
+    background-color: rgba(0,0,0,.1);
+}

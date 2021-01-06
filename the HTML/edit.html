@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            مدیریت وظایف
+                        </div>
+                        <div class="card-body">
+                            <div class="actions">
+                                <a href="add.html" class="btn btn-outline-success btn-icon">
+                                    <i class="material-icons">
+                                        note_add
+                                    </i>
+                                    <span>وظیفه جدید</span>
+                                </a>
+                                <a href="index.html" class="btn btn-outline-primary btn-icon">
+                                    <i class="material-icons">
+                                        list
+                                    </i>
+                                    <span>لیست وظایف</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            ایجاد وظیفه جدید
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="task_title">عنوان</label>
+                                    <input type="text" class="form-control" name="task_title" id="task_title"
+                                        placeholder="عنوان وظیفه">
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="task_category">دسته بندی</label>
+                                    <select class="form-control" name="task_category" id="task_category">
+                                        <option value="0">انتخاب کنید</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="task_owner">انجام دهنده</label>
+                                    <input type="text" class="form-control" name="task_owner" id="task_owner"
+                                        placeholder="انجام دهنده وظیفه">
+                                    <!-- <select class="form-control" name="task_category" id="task_category">
+                                        <option value="0">انتخاب کنید</option>
+                                    </select> -->
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">در حال انجام</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                            id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">انجام شده</label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-success">ذخیره اطلاعات</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
