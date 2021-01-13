@@ -20,9 +20,6 @@ application.use('/tasks', teskRouter)
 
 
 
-
-
-
 const startApplication = () => {
 
     application.listen(5000, () => {

@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/fonts/fonts.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link rel="stylesheet" href="./assets/css/custom.css" />
-  </head>
+<%- include('../partials/header') %>
 
   <body>
     <div id="wrapper">
@@ -27,7 +13,7 @@
                     <i class="material-icons"> note_add </i>
                     <span>اضافه کردن</span>
                   </a>
-                  <a href="index.html" class="btn btn-outline-primary btn-icon">
+                  <a href="/" class="btn btn-outline-primary btn-icon">
                     <i class="material-icons"> list </i>
                     <span>لیست وظایف</span>
                   </a>
@@ -61,70 +47,8 @@
                     </tr>
                   </tfoot>
                   <tbody>
-                    <tr>
-                      <td>ارسال گزارش دستمزد و حقوق</td>
-                      <td>مالی</td>
-                      <td>مهرداد سامی</td>
-                      <td>
-                        <span class="badge badge-primary">در حال انجام</span>
-                      </td>
-                      <td>
-                        <a href="">
-                          <i class="material-icons"> edit </i>
-                        </a>
-                        <a href="">
-                          <i class="material-icons"> delete </i>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>مصاحبه با نیروی فنی</td>
-                      <td>نیروی انسانی</td>
-                      <td>محمد نجاری</td>
-                      <td>
-                        <span class="badge badge-success">انجام شده</span>
-                      </td>
-                      <td>
-                        <a href="">
-                          <i class="material-icons"> edit </i>
-                        </a>
-                        <a href="">
-                          <i class="material-icons"> delete </i>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>جلسه با مشاور مالی</td>
-                      <td>مدیریت</td>
-                      <td>وحید صالحی</td>
-                      <td>
-                        <span class="badge badge-warning">ایجاد شده</span>
-                      </td>
-                      <td>
-                        <a href="">
-                          <i class="material-icons"> edit </i>
-                        </a>
-                        <a href="">
-                          <i class="material-icons"> delete </i>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>شرکت در همایش برنامه نویسی</td>
-                      <td>فنی</td>
-                      <td>حامد سبزیان</td>
-                      <td>
-                        <span class="badge badge-danger">لغو شده</span>
-                      </td>
-                      <td>
-                        <a href="">
-                          <i class="material-icons"> edit </i>
-                        </a>
-                        <a href="">
-                          <i class="material-icons"> delete </i>
-                        </a>
-                      </td>
-                    </tr>
+                    <% tasks.forEach(function(task){ %> <%- include('./item',
+                    {task: task}); %> <% }); %>
                   </tbody>
                 </table>
               </div>

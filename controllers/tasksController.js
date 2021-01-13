@@ -16,6 +16,23 @@ exports.store = (req, res) => {
 
         if (error) throw error
 
-        res.render('tasks/create')
+        res.redirect('/tasks/add')
     })
+}
+
+exports.remove = (req, res) => {
+    db.query(`DELETE FROM tasks WHERE task_id = ${req.params.id}`, function (error, results, fields) {
+        if (error) throw error;
+        res.redirect('/')
+    })
+}
+
+exports.edit = (req, res) => {
+    // db.query('UPDATE tasks SET task_title = ?, task_category = ?, task_assignee = ? , task_status = ? WHERE id = ?', ['a', 'b', 'c', req.params.id], function (error, results, fields) {
+    //     if (error) throw error;
+    //     // ...
+    // })
+    // console.log(req.body.task_title)
+    res.render('tasks/edit')
+
 }
